@@ -6,22 +6,8 @@ import React from "react";
 import { MapProvider } from "./providers/map-provider";
 import { MapComponent } from "./components/map";
 import styles from "./page.module.css";
-import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
 
 function App() {
-  const firebaseConfig = {
-    apiKey: "AIzaSyBcxnBgug79rLVuDg34H4klGC2QkyPIPEA",
-    authDomain: "location-seeker-adb42.firebaseapp.com",
-    projectId: "location-seeker-adb42",
-    storageBucket: "location-seeker-adb42.firebasestorage.app",
-    messagingSenderId: "705719582349",
-    appId: "1:705719582349:web:092e9bb4b7fc214a91ecc4",
-    measurementId: "G-M7QRQHR7E5"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  // const analytics = getAnalytics(app); 
 
   const [image, setImage] = React.useState("/cambo_full.jpg")
    // from https://dev.to/aneeqakhan/how-to-add-markers-to-google-maps-in-reactjs-1jnk
