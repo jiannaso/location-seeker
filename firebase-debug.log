@@ -1,0 +1,152 @@
+[debug] [2025-05-05T20:53:05.476Z] ----------------------------------------------------------------------
+[debug] [2025-05-05T20:53:05.478Z] Command:       /usr/local/bin/firebase /Users/jiannaso/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2025-05-05T20:53:05.478Z] CLI Version:   13.7.2
+[debug] [2025-05-05T20:53:05.479Z] Platform:      darwin
+[debug] [2025-05-05T20:53:05.479Z] Node Version:  v18.5.0
+[debug] [2025-05-05T20:53:05.480Z] Time:          Mon May 05 2025 16:53:05 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-05-05T20:53:05.480Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-05T20:53:05.577Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-05T20:53:05.579Z] > authorizing via signed-in user (jiannaso@gmail.com)
+[debug] [2025-05-05T20:53:05.579Z] [iam] checking project location-seeker-adb42 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-05-05T20:53:05.581Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions [none]
+[debug] [2025-05-05T20:53:05.582Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions x-goog-quota-user=projects/location-seeker-adb42
+[debug] [2025-05-05T20:53:05.583Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-05T20:53:05.839Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions 200
+[debug] [2025-05-05T20:53:05.842Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-05T20:53:05.846Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 [none]
+[debug] [2025-05-05T20:53:06.167Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 200
+[debug] [2025-05-05T20:53:06.171Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 {"projectId":"location-seeker-adb42","projectNumber":"705719582349","displayName":"location-seeker","name":"projects/location-seeker-adb42","resources":{"hostingSite":"location-seeker-adb42"},"state":"ACTIVE","etag":"1_6ff71aca-6336-473c-a3d3-383370ff2e09"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-05-05T20:53:11.023Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 [none]
+[debug] [2025-05-05T20:53:11.640Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 200
+[debug] [2025-05-05T20:53:11.641Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 {"name":"projects/location-seeker-adb42/sites/location-seeker-adb42","defaultUrl":"https://location-seeker-adb42.web.app","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version "^18.18.0 || ^19.8.0 || >= 20.0.0" is required.
+
+[debug] [2025-05-05T20:53:12.316Z] Error: ENOENT: no such file or directory, open '/Users/jiannaso/Documents/github/expertise_support/360_proto/360_proto/.next/server/middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-05-05T20:56:56.885Z] ----------------------------------------------------------------------
+[debug] [2025-05-05T20:56:56.887Z] Command:       /usr/local/bin/firebase /Users/jiannaso/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2025-05-05T20:56:56.887Z] CLI Version:   13.7.2
+[debug] [2025-05-05T20:56:56.887Z] Platform:      darwin
+[debug] [2025-05-05T20:56:56.888Z] Node Version:  v18.5.0
+[debug] [2025-05-05T20:56:56.889Z] Time:          Mon May 05 2025 16:56:56 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-05-05T20:56:56.889Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-05T20:56:56.975Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-05T20:56:56.976Z] > authorizing via signed-in user (jiannaso@gmail.com)
+[debug] [2025-05-05T20:56:56.977Z] [iam] checking project location-seeker-adb42 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-05-05T20:56:56.978Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions [none]
+[debug] [2025-05-05T20:56:56.979Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions x-goog-quota-user=projects/location-seeker-adb42
+[debug] [2025-05-05T20:56:56.980Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-05T20:56:57.281Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions 200
+[debug] [2025-05-05T20:56:57.283Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-05T20:56:57.287Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 [none]
+[debug] [2025-05-05T20:56:57.678Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 200
+[debug] [2025-05-05T20:56:57.682Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 {"projectId":"location-seeker-adb42","projectNumber":"705719582349","displayName":"location-seeker","name":"projects/location-seeker-adb42","resources":{"hostingSite":"location-seeker-adb42"},"state":"ACTIVE","etag":"1_6ff71aca-6336-473c-a3d3-383370ff2e09"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-05-05T20:57:02.642Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 [none]
+[debug] [2025-05-05T20:57:03.270Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 200
+[debug] [2025-05-05T20:57:03.270Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 {"name":"projects/location-seeker-adb42/sites/location-seeker-adb42","defaultUrl":"https://location-seeker-adb42.web.app","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version "^18.18.0 || ^19.8.0 || >= 20.0.0" is required.
+
+[debug] [2025-05-05T20:57:03.767Z] Error: ENOENT: no such file or directory, open '/Users/jiannaso/Documents/github/expertise_support/360_proto/360_proto/.next/server/middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-05-05T20:58:13.945Z] ----------------------------------------------------------------------
+[debug] [2025-05-05T20:58:13.946Z] Command:       /usr/local/bin/firebase /Users/jiannaso/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2025-05-05T20:58:13.947Z] CLI Version:   13.7.2
+[debug] [2025-05-05T20:58:13.947Z] Platform:      darwin
+[debug] [2025-05-05T20:58:13.947Z] Node Version:  v18.5.0
+[debug] [2025-05-05T20:58:13.948Z] Time:          Mon May 05 2025 16:58:13 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-05-05T20:58:13.949Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-05T20:58:14.033Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-05T20:58:14.034Z] > authorizing via signed-in user (jiannaso@gmail.com)
+[debug] [2025-05-05T20:58:14.035Z] [iam] checking project location-seeker-adb42 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-05-05T20:58:14.036Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions [none]
+[debug] [2025-05-05T20:58:14.037Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions x-goog-quota-user=projects/location-seeker-adb42
+[debug] [2025-05-05T20:58:14.037Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-05T20:58:14.342Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions 200
+[debug] [2025-05-05T20:58:14.345Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-05T20:58:14.349Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 [none]
+[debug] [2025-05-05T20:58:14.737Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 200
+[debug] [2025-05-05T20:58:14.738Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 {"projectId":"location-seeker-adb42","projectNumber":"705719582349","displayName":"location-seeker","name":"projects/location-seeker-adb42","resources":{"hostingSite":"location-seeker-adb42"},"state":"ACTIVE","etag":"1_6ff71aca-6336-473c-a3d3-383370ff2e09"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-05-05T20:58:19.710Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 [none]
+[debug] [2025-05-05T20:58:20.265Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 200
+[debug] [2025-05-05T20:58:20.265Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 {"name":"projects/location-seeker-adb42/sites/location-seeker-adb42","defaultUrl":"https://location-seeker-adb42.web.app","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version "^18.18.0 || ^19.8.0 || >= 20.0.0" is required.
+
+[debug] [2025-05-05T20:58:20.719Z] Error: ENOENT: no such file or directory, open '/Users/jiannaso/Documents/github/expertise_support/360_proto/360_proto/.next/server/middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-05-05T20:59:31.623Z] ----------------------------------------------------------------------
+[debug] [2025-05-05T20:59:31.624Z] Command:       /usr/local/bin/firebase /Users/jiannaso/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2025-05-05T20:59:31.624Z] CLI Version:   13.7.2
+[debug] [2025-05-05T20:59:31.624Z] Platform:      darwin
+[debug] [2025-05-05T20:59:31.625Z] Node Version:  v18.5.0
+[debug] [2025-05-05T20:59:31.626Z] Time:          Mon May 05 2025 16:59:31 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-05-05T20:59:31.626Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-05T20:59:31.712Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-05T20:59:31.713Z] > authorizing via signed-in user (jiannaso@gmail.com)
+[debug] [2025-05-05T20:59:31.714Z] [iam] checking project location-seeker-adb42 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-05-05T20:59:31.715Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions [none]
+[debug] [2025-05-05T20:59:31.716Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions x-goog-quota-user=projects/location-seeker-adb42
+[debug] [2025-05-05T20:59:31.717Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-05T20:59:31.973Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions 200
+[debug] [2025-05-05T20:59:31.977Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/location-seeker-adb42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-05T20:59:31.981Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 [none]
+[debug] [2025-05-05T20:59:32.359Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 200
+[debug] [2025-05-05T20:59:32.361Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/location-seeker-adb42 {"projectId":"location-seeker-adb42","projectNumber":"705719582349","displayName":"location-seeker","name":"projects/location-seeker-adb42","resources":{"hostingSite":"location-seeker-adb42"},"state":"ACTIVE","etag":"1_6ff71aca-6336-473c-a3d3-383370ff2e09"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-05-05T20:59:37.215Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 [none]
+[debug] [2025-05-05T20:59:37.894Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 200
+[debug] [2025-05-05T20:59:37.895Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/location-seeker-adb42/sites/location-seeker-adb42 {"name":"projects/location-seeker-adb42/sites/location-seeker-adb42","defaultUrl":"https://location-seeker-adb42.web.app","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version "^18.18.0 || ^19.8.0 || >= 20.0.0" is required.
+
+[debug] [2025-05-05T20:59:38.375Z] Error: ENOENT: no such file or directory, open '/Users/jiannaso/Documents/github/expertise_support/360_proto/360_proto/.next/server/middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.

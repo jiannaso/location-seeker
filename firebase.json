@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "source": "360_proto",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-east1"
+    }
+  }
+}
