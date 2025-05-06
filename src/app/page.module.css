@@ -188,22 +188,23 @@ a.secondary {
 }
 
 .text {
-  display: flex;
+  /* display: flex; */
   position: fixed;
   top: 0;
   z-index: 1;
-  background-color:  rgba(0, 0, 0, .8) ;
+  background-color:  rgba(255, 255, 255, .9) ;
   margin: 3vh 5vw;
   padding: 20px;
-  color: white;
-  width: 90vw;
+  color: black;
+  width: 200px;
   align-self: center;
+  border-radius: 10px;
 }
 
-.hint {
-  background-color: none;
+#hint {
+  /* background-color: none;
   display: inline-block;
   margin: 5px;
   padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: 10px; */
 }

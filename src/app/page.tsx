@@ -6,6 +6,10 @@ import React from "react";
 import { MapProvider } from "./providers/map-provider";
 import { MapComponent } from "./components/map";
 import styles from "./page.module.css";
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import Typography from "@mui/material/Typography";
+import { Box } from "@mui/material";
 
 function App() {
 
@@ -25,18 +29,22 @@ function App() {
           padding-top={"20px"}
         ></ReactPhotoSphereViewer>
         
-        <div className = {styles.text}>
-        <h1 className={styles.h1}> Welcome to LocationSeeker!</h1>
-        
-        <div>
-          <p className={styles.h2}> Inspect the Google Street Image below. On the map, select a location closest to the location shown in the image. </p>
-              <div style={{display: "flex"}}>
-                <h4 className={styles.h4}> Get hint? </h4>
-                <button className={styles.hint} onClick = {() => setImage("/cambo_full_anno.jpg")}>Yes</button>
-                <button className={styles.hint} onClick = {() => setImage("/cambo_full.jpg")}>No</button> 
-              </div>
-        </div>
-      </div>
+        <Box component="section" sx={{ p: 2 }} className={styles.text}>
+          <Box component="section" sx={{ pb: 1 }}>
+            <Typography variant="overline">WELCOME TO</Typography>
+            <Typography variant="h6">LocationSeeker</Typography>
+          </Box>
+        {/* <div> */}
+          <Typography variant="body2"> Inspect the Google Street Image below. On the map, select a location closest to the location shown in the image. </Typography>
+              <Box component="section" sx={{ mt: 1 }}>
+                <Typography variant="button" > Need a hint? </Typography>
+                <ButtonGroup variant="text" aria-label="Basic button group">
+                <Button variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full_anno.jpg")}>Yes</Button>
+                <Button variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full.jpg")}>No</Button> 
+                </ButtonGroup>
+              </Box>
+        {/* </div> */}
+      </Box>
 
         <div className={styles.map}>
         <MapProvider>
