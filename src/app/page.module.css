@@ -168,11 +168,11 @@ a.secondary {
 }
 
 .map {
-  width: 30vw;
-  height: 30vh;
+  /* width: 450px;
+  height: 250px; */
   overflow: hidden;
   position: absolute;
-  top: 65vh;
+  top: 60vh;
   left: 68vw;
   border-radius: .5rem;
   z-index: 1;
@@ -196,7 +196,7 @@ a.secondary {
   margin: 3vh 3vw;
   padding: 20px;
   color: black;
-  width: 200px;
+  /* width: 30vw; */
   align-self: center;
   border-radius: 10px;
 }

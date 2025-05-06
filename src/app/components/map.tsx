@@ -24,14 +24,14 @@ const defaultMapZoom = 2
 const defaultMapOptions = {
   zoomControl: true,
   tilt: 0,
-  gestureHandling: 'auto',
+//   gestureHandling: 'auto',
 //   mapTypeId: 'map',
 };
 
 function MapComponent() {
     const [markerLocation, setMarkerLocation] = useState({
-        lat: 51.509865,
-        lng: -0.118092,
+        lat: 300,
+        lng: 300,
       });
 
     const handleMapClick = (e: google.maps.MapMouseEvent) => {
@@ -65,7 +65,7 @@ function MapComponent() {
     return (
         <div className="w-full">
             <GoogleMap 
-            mapContainerStyle={defaultMapContainerStyle}
+            mapContainerStyle={{width: "30vw", height: "30vh", borderRadius: '15px 0px 0px 15px'}}
             center={defaultMapCenter}
             zoom={defaultMapZoom}
             options={defaultMapOptions}

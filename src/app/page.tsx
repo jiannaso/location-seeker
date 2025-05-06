@@ -27,6 +27,7 @@ function App() {
           height={"100vh"}
           width={"100vw"}
           padding-top={"20px"}
+          hideNavbarButton={false}
         ></ReactPhotoSphereViewer>
         
         <Box component="section" sx={{ p: 2 }} className={styles.text}>
@@ -35,25 +36,70 @@ function App() {
             <Typography variant="h6">LocationSeeker</Typography>
           </Box>
         {/* <div> */}
-          <Typography variant="body2"> Inspect the Google Street Image below. On the map, select a location closest to the location shown in the image. </Typography>
-              <Box component="section" sx={{ mt: 1 }}>
+          <Typography variant="body2"> Inspect the image below. On the map, click to drop <br></br> a pin closest to the location shown in the image. </Typography>
+              <Box component="section" sx={{ mt: 2, mb: .5 }}>
                 <Typography variant="button" > Need a hint? </Typography>
                 <ButtonGroup variant="text" aria-label="Basic button group">
-                <Button variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full_anno.jpg")}>Yes</Button>
+                <Button sx={{ ml: 1}}variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full_anno.jpg")}>Yes</Button>
                 <Button variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full.jpg")}>No</Button> 
                 </ButtonGroup>
               </Box>
         {/* </div> */}
+        
       </Box>
 
-        <div className={styles.map}>
+        
+      <div className={styles.map}>
         <MapProvider>
           <MapComponent />
         </MapProvider>
         </div>
+        
      </div>
      </div>
   );
 }
+
+// return (
+//   <div className="App">
+
+
+//     <div className={styles.interaction}>
+//       <ReactPhotoSphereViewer
+//         src = {image}
+//         height={"100vh"}
+//         width={"100vw"}
+//         padding-top={"20px"}
+//         hideNavbarButton={false}
+//       ></ReactPhotoSphereViewer>
+      
+//       <Box component="section" sx={{ p: 2 }} className={styles.text}>
+//         <Box component="section" sx={{ pb: 1 }}>
+//           <Typography variant="overline">WELCOME TO</Typography>
+//           <Typography variant="h6">LocationSeeker</Typography>
+//         </Box>
+//       {/* <div> */}
+//         <Typography variant="body2"> Inspect the Google Street Image below. On the map, select a location closest to the location shown in the image. </Typography>
+//             <Box component="section" sx={{ mt: 1 }}>
+//               <Typography variant="button" > Need a hint? </Typography>
+//               <ButtonGroup variant="text" aria-label="Basic button group">
+//               <Button variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full_anno.jpg")}>Yes</Button>
+//               <Button variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full.jpg")}>No</Button> 
+//               </ButtonGroup>
+//             </Box>
+//       {/* </div> */}
+//     </Box>
+
+//       <div className={styles.map}>
+//       <MapProvider>
+//         <MapComponent />
+//       </MapProvider>
+//       </div>
+
+      
+//    </div>
+//    </div>
+// );
+// }
 
 export default App;
