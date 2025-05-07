@@ -92,7 +92,7 @@ function MapComponent({ onImageChange }: MapComponentProps) {
               if (data.results.length > 0) {
                   const address = data.results[0].formatted_address;
                   console.log("Address:", address);
-                  setAddress(address);
+                  setAddress("You selected: " + address);
               } else {
                   console.log("No results found");
                   setAddress("No address found");
