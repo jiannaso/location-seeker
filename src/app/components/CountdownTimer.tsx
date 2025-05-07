@@ -42,10 +42,10 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ initialTime = 90
       }}
     >
       <Typography variant="caption" color="text.secondary" sx={{ mb: 1, display: 'block', textAlign: 'right' }}>
-        Location 1
+        Q1 TIMER
       </Typography>
-      <Typography variant="h6" sx={{ color: 'black' }}>
-        Time Left: {formatTime(timeLeft)}
+      <Typography variant="h4" sx={{ color: 'black' }}>
+        {formatTime(timeLeft)}
       </Typography>
     </Box>
   );
