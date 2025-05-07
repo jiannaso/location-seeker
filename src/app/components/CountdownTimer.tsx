@@ -35,7 +35,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ initialTime = 90
         top: 20,
         right: 20,
         zIndex: 1000,
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        backgroundColor: 'rgba(255, 255, 255, 0.85)',
         padding: '8px 16px',
         borderRadius: '4px',
         boxShadow: '0 2px 4px rgba(0,0,0,0.1)'

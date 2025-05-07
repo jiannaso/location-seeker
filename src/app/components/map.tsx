@@ -34,11 +34,11 @@ interface LocationSubmitProps {
   address: string;
 }
 
-const LocationSubmit: React.FC<LocationSubmitProps> = ({ onSubmit, hasLocation, address }) => {
+const LocationSubmit: React.FC<LocationSubmitProps> = ({ onSubmit, address }) => {
   return (
     <Box 
       sx={{ 
-        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        backgroundColor: 'rgba(255, 255, 255, 0.85)',
         borderRadius: '8px',
         padding: '16px',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -48,7 +48,7 @@ const LocationSubmit: React.FC<LocationSubmitProps> = ({ onSubmit, hasLocation, 
         marginTop: '16px'
       }}
     >
-      <Typography variant="body1">{hasLocation ? address : "Please select a location"}</Typography>
+      <Typography variant="body2">{address}</Typography>
       <Button 
         variant="contained" 
         color="primary"
@@ -70,7 +70,7 @@ function MapComponent({ onImageChange }: MapComponentProps) {
         lng: 300,
       });
     const [hasLocation, setHasLocation] = useState(false);
-    const [address, setAddress] = useState("");
+    const [address, setAddress] = useState("Please select a location.");
 
     const handleMapClick = (e: google.maps.MapMouseEvent) => {
         console.log("click");
@@ -110,6 +110,7 @@ function MapComponent({ onImageChange }: MapComponentProps) {
         setHasLocation(false);
         setAddress("");
         onImageChange("/21_compass_annotations_expert.jpg");
+        setAddress("Check again! A hint is shown.")
     };
 
     return (

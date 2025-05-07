@@ -9,6 +9,7 @@ interface HintProps {
 export const Hint: React.FC<HintProps> = ({ onHintClick }) => {
   const [showHint, setShowHint] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [hintShown, setHintShown] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -26,10 +27,15 @@ export const Hint: React.FC<HintProps> = ({ onHintClick }) => {
     return null;
   }
 
+  const handleHintClick = () => {
+    onHintClick(true);
+    setHintShown(true);
+  };
+
   return (
     <Box 
       sx={{ 
-        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        backgroundColor: 'rgba(255, 255, 255, 0.85)',
         borderRadius: '8px',
         padding: '16px',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -41,11 +47,24 @@ export const Hint: React.FC<HintProps> = ({ onHintClick }) => {
         transition: 'opacity 0.5s ease-in-out'
       }}
     >
-      <Typography variant="button" sx={{ lineHeight: 1 }}>Need a hint?</Typography>
+      <Typography 
+        variant="button" 
+        sx={{ 
+          lineHeight: 1,
+          color: hintShown ? '#4CAF50' : 'inherit'
+        }}
+      >
+        {hintShown ? 'Hints are shown' : 'Need a hint?'}
+      </Typography>
       <Button 
         variant="contained"
         color="primary"
-        onClick={() => onHintClick(true)}
+        onClick={handleHintClick}
+        disabled={hintShown}
+        sx={{ 
+          opacity: hintShown ? 0.5 : 1,
+          transition: 'opacity 0.3s ease-in-out'
+        }}
       >
         Yes
       </Button>
