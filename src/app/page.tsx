@@ -6,100 +6,66 @@ import React from "react";
 import { MapProvider } from "./providers/map-provider";
 import { MapComponent } from "./components/map";
 import styles from "./page.module.css";
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import Typography from "@mui/material/Typography";
-import { Box } from "@mui/material";
+import { CountdownTimer } from "./components/CountdownTimer";
+import { WelcomeBox } from "./components/WelcomeBox";
+import { Hint } from "./components/Hint";
+import { LandingPage } from "./components/LandingPage";
 
 function App() {
+  const [image, setImage] = React.useState("/21_compass.jpg");
+  const [showLanding, setShowLanding] = React.useState(true);
 
-  const [image, setImage] = React.useState("/cambo_full.jpg")
-   // from https://dev.to/aneeqakhan/how-to-add-markers-to-google-maps-in-reactjs-1jnk
-   // from https://medium.com/@saraanofficial/google-maps-integration-in-next-14-13-and-react-load-display-step-by-step-guide-ab2f6ed7b3c0
+  const handleHintClick = (showHint: boolean) => {
+    setImage(showHint ? "/21_compass_annotations_novice.jpg" : "/21_compass.jpg");
+  };
+
+  const handleStartGame = () => {
+    setShowLanding(false);
+  };
+
+  if (showLanding) {
+    return <LandingPage onStartGame={handleStartGame} />;
+  }
 
   return (
     <div className="App">
-
-
+      <CountdownTimer />
       <div className={styles.interaction}>
         <ReactPhotoSphereViewer
-          src = {image}
+          src={image}
           height={"100vh"}
           width={"100vw"}
           padding-top={"20px"}
           hideNavbarButton={false}
         ></ReactPhotoSphereViewer>
         
-        <Box component="section" sx={{ p: 2 }} className={styles.text}>
-          <Box component="section" sx={{ pb: 1 }}>
-            <Typography variant="overline">WELCOME TO</Typography>
-            <Typography variant="h6">LocationSeeker</Typography>
-          </Box>
-        {/* <div> */}
-          <Typography variant="body2"> Inspect the image below. On the map, click to drop <br></br> a pin closest to the location shown in the image. </Typography>
-              <Box component="section" sx={{ mt: 2, mb: .5 }}>
-                <Typography variant="button" > Need a hint? </Typography>
-                <ButtonGroup variant="text" aria-label="Basic button group">
-                <Button sx={{ ml: 1}}variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full_anno.jpg")}>Yes</Button>
-                <Button variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full.jpg")}>No</Button> 
-                </ButtonGroup>
-              </Box>
-        {/* </div> */}
-        
-      </Box>
-
-        
-      <div className={styles.map}>
-        <MapProvider>
-          <MapComponent />
-        </MapProvider>
+        <div style={{ 
+          position: 'absolute', 
+          top: '20px', 
+          left: '20px', 
+          display: 'flex', 
+          flexDirection: 'column',
+          gap: '10px'
+        }}>
+          <WelcomeBox />
+          <Hint onHintClick={handleHintClick} />
         </div>
         
-     </div>
-     </div>
+        <div className={styles.map}>
+          <MapProvider>
+            <MapComponent onImageChange={setImage} />
+          </MapProvider>
+        </div>
+
+        <div style={{ 
+          position: 'absolute', 
+          bottom: '20px', 
+          right: '20px'
+        }}>
+        </div>
+      </div>
+    </div>
   );
 }
-
-// return (
-//   <div className="App">
-
-
-//     <div className={styles.interaction}>
-//       <ReactPhotoSphereViewer
-//         src = {image}
-//         height={"100vh"}
-//         width={"100vw"}
-//         padding-top={"20px"}
-//         hideNavbarButton={false}
-//       ></ReactPhotoSphereViewer>
-      
-//       <Box component="section" sx={{ p: 2 }} className={styles.text}>
-//         <Box component="section" sx={{ pb: 1 }}>
-//           <Typography variant="overline">WELCOME TO</Typography>
-//           <Typography variant="h6">LocationSeeker</Typography>
-//         </Box>
-//       {/* <div> */}
-//         <Typography variant="body2"> Inspect the Google Street Image below. On the map, select a location closest to the location shown in the image. </Typography>
-//             <Box component="section" sx={{ mt: 1 }}>
-//               <Typography variant="button" > Need a hint? </Typography>
-//               <ButtonGroup variant="text" aria-label="Basic button group">
-//               <Button variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full_anno.jpg")}>Yes</Button>
-//               <Button variant="outlined" id={styles.hint} onClick = {() => setImage("/cambo_full.jpg")}>No</Button> 
-//               </ButtonGroup>
-//             </Box>
-//       {/* </div> */}
-//     </Box>
-
-//       <div className={styles.map}>
-//       <MapProvider>
-//         <MapComponent />
-//       </MapProvider>
-//       </div>
-
-      
-//    </div>
-//    </div>
-// );
-// }
 
 export default App;
