@@ -170,11 +170,10 @@ a.secondary {
 .map {
   /* width: 450px;
   height: 250px; */
-  overflow: hidden;
   position: absolute;
-  top: 50vh;
+  top: 55vh;
   left: 68.5vw;
-  border-radius: .5rem;
+  /* border-radius: .5rem; */
   z-index: 1;
 
 }

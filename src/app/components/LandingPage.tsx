@@ -36,7 +36,7 @@ export function LandingPage({ onStartGame }: LandingPageProps) {
           backgroundColor: 'white',
           padding: '40px',
           borderRadius: '10px',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          // boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
           textAlign: 'center',
           position: 'relative',
           zIndex: 2
@@ -51,10 +51,10 @@ export function LandingPage({ onStartGame }: LandingPageProps) {
         </Typography>
         <Button
           variant="contained"
-          size="large"
+          size="small"
           onClick={onStartGame}
           sx={{
-            padding: '12px 32px',
+            padding: '10px 20px',
             fontSize: '1.1rem'
           }}
         >

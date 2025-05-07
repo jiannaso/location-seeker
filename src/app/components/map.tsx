@@ -39,16 +39,18 @@ const LocationSubmit: React.FC<LocationSubmitProps> = ({ onSubmit, address }) =>
     <Box 
       sx={{ 
         backgroundColor: 'rgba(255, 255, 255, 0.85)',
-        borderRadius: '8px',
+        borderRadius: '0 0 10px 10px',
         padding: '16px',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginTop: '16px'
+        marginTop: '-7px'
       }}
     >
-      <Typography variant="body2">{address}</Typography>
+        <Box sx={{width: '75%'}}>
+            <Typography variant="body2">{address}</Typography>
+        </Box>
       <Button 
         variant="contained" 
         color="primary"
@@ -116,7 +118,7 @@ function MapComponent({ onImageChange }: MapComponentProps) {
     return (
         <div className="w-full">
             <GoogleMap 
-            mapContainerStyle={{width: "30vw", height: "30vh", borderRadius: '15px 0px 0px 15px'}}
+            mapContainerStyle={{width: "30vw", height: "30vh", borderRadius: '10px 10px 0px 0px'}}
             center={defaultMapCenter}
             zoom={defaultMapZoom}
             options={defaultMapOptions}
