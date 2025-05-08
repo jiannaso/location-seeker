@@ -40,6 +40,8 @@ export const Hint: React.FC<HintProps> = ({ onHintClick }) => {
         padding: '16px',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
         display: 'flex',
+        flexDirection: 'column',
+        gap: '12px',
         alignItems: 'center',
         justifyContent: 'space-between',
         border: '4px solid #4CAF50',
@@ -47,27 +49,29 @@ export const Hint: React.FC<HintProps> = ({ onHintClick }) => {
         transition: 'opacity 0.5s ease-in-out'
       }}
     >
-      <Typography 
-        variant="button" 
-        sx={{ 
-          lineHeight: 1,
-          color: hintShown ? '#4CAF50' : 'inherit'
-        }}
-      >
-        {hintShown ? 'Hints are shown' : 'Need a hint?'}
-      </Typography>
-      <Button 
-        variant="contained"
-        color="primary"
-        onClick={handleHintClick}
-        disabled={hintShown}
-        sx={{ 
-          opacity: hintShown ? 0.5 : 1,
-          transition: 'opacity 0.3s ease-in-out'
-        }}
-      >
-        Yes
-      </Button>
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+        <Typography 
+          variant="button" 
+          sx={{ 
+            lineHeight: 1,
+            color: hintShown ? '#4CAF50' : 'inherit'
+          }}
+        >
+          {hintShown ? 'Hints are shown' : 'Need a hint?'}
+        </Typography>
+        <Button 
+          variant="contained"
+          color="primary"
+          onClick={handleHintClick}
+          disabled={hintShown}
+          sx={{ 
+            opacity: hintShown ? 0.5 : 1,
+            transition: 'opacity 0.3s ease-in-out'
+          }}
+        >
+          Yes
+        </Button>
+      </Box>
     </Box>
   );
 }; 

@@ -64,9 +64,10 @@ const LocationSubmit: React.FC<LocationSubmitProps> = ({ onSubmit, address }) =>
 
 interface MapComponentProps {
   onImageChange: (image: string) => void;
+  location: string;
 }
 
-function MapComponent({ onImageChange }: MapComponentProps) {
+function MapComponent({ onImageChange, location }: MapComponentProps) {
     const [markerLocation, setMarkerLocation] = useState({
         lat: 300,
         lng: 300,
@@ -111,7 +112,7 @@ function MapComponent({ onImageChange }: MapComponentProps) {
         console.log("Location submitted");
         setHasLocation(false);
         setAddress("");
-        onImageChange("/21_compass_annotations_expert.jpg");
+        onImageChange("/may8_" + location + "_expert.jpg");
         setAddress("Check again! A hint is shown.")
     };
 

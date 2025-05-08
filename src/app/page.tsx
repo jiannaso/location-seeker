@@ -12,11 +12,17 @@ import { Hint } from "./components/Hint";
 import { LandingPage } from "./components/LandingPage";
 
 function App() {
-  const [image, setImage] = React.useState("/21_compass.jpg");
+  const [image, setImage] = React.useState("/may8_1.jpg");
   const [showLanding, setShowLanding] = React.useState(true);
+  const [location, setLocation] = React.useState("1");
 
   const handleHintClick = (showHint: boolean) => {
-    setImage(showHint ? "/21_compass_annotations_novice.jpg" : "/21_compass.jpg");
+    setImage(showHint ? "/may8_"+location+"_novice.jpg" : "/may8_"+location+".jpg");
+  };
+
+  const handleLocationChange = (newLocation: string, newImage: string) => {
+    setLocation(newLocation);
+    setImage(newImage);
   };
 
   const handleStartGame = () => {
@@ -47,13 +53,17 @@ function App() {
           flexDirection: 'column',
           gap: '10px'
         }}>
-          <WelcomeBox />
+          <WelcomeBox 
+            location={location} 
+            setLocation={setLocation} 
+            onLocationChange={handleLocationChange}
+          />
           <Hint onHintClick={handleHintClick} />
         </div>
         
         <div className={styles.map}>
           <MapProvider>
-            <MapComponent onImageChange={setImage} />
+            <MapComponent onImageChange={setImage} location={location} />
           </MapProvider>
         </div>
 
