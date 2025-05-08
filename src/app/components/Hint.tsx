@@ -75,7 +75,7 @@ export const Hint: React.FC<HintProps> = ({ onHintClick, location }) => {
             }}
           >
             {hintShown && location == "2"? 'Aspen trees, wide dirt road, yellow sign' : ' '}
-            {hintShown && location == "1"? 'Muslim garb, camera quality, police car' : ' '}
+            {hintShown && location == "1"? 'Muslim garb, camera quality, moped' : ' '}
 
           </Typography>
         </Box>
