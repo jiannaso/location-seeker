@@ -70,7 +70,7 @@ export const Hint: React.FC<HintProps> = ({ onHintClick, location }) => {
             variant="body2" 
             sx={{ 
               lineHeight: 1,
-              mr: 2
+              width: '95%',
               // color: hintShown ? '#4CAF50' : 'inherit'
             }}
           >
