@@ -58,7 +58,7 @@ function App() {
             setLocation={setLocation} 
             onLocationChange={handleLocationChange}
           />
-          <Hint onHintClick={handleHintClick} />
+          <Hint onHintClick={handleHintClick} location={location} />
         </div>
         
         <div className={styles.map}>

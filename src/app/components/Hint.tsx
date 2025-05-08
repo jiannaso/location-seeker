@@ -4,9 +4,10 @@ import { Box, Typography, Button } from '@mui/material';
 
 interface HintProps {
   onHintClick: (showHint: boolean) => void;
+  location: string;
 }
 
-export const Hint: React.FC<HintProps> = ({ onHintClick }) => {
+export const Hint: React.FC<HintProps> = ({ onHintClick, location }) => {
   const [showHint, setShowHint] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [hintShown, setHintShown] = useState(false);
@@ -22,6 +23,11 @@ export const Hint: React.FC<HintProps> = ({ onHintClick }) => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  // Reset hintShown when location changes
+  useEffect(() => {
+    setHintShown(false);
+  }, [location]);
 
   if (!showHint) {
     return null;
@@ -50,15 +56,29 @@ export const Hint: React.FC<HintProps> = ({ onHintClick }) => {
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
-        <Typography 
-          variant="button" 
-          sx={{ 
-            lineHeight: 1,
-            color: hintShown ? '#4CAF50' : 'inherit'
-          }}
-        >
-          {hintShown ? 'Hints are shown' : 'Need a hint?'}
-        </Typography>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+          <Typography 
+            variant="button" 
+            sx={{ 
+              lineHeight: 1,
+              color: hintShown ? '#4CAF50' : 'inherit'
+            }}
+          >
+            {hintShown ? 'Hints are shown' : 'Need a hint?'}
+          </Typography>
+          <Typography 
+            variant="body2" 
+            sx={{ 
+              lineHeight: 1,
+              mr: 2
+              // color: hintShown ? '#4CAF50' : 'inherit'
+            }}
+          >
+            {hintShown && location == "2"? 'Aspen trees, wide dirt road, yellow sign' : ' '}
+            {hintShown && location == "1"? 'Muslim garb, camera quality, police car' : ' '}
+
+          </Typography>
+        </Box>
         <Button 
           variant="contained"
           color="primary"
@@ -66,7 +86,7 @@ export const Hint: React.FC<HintProps> = ({ onHintClick }) => {
           disabled={hintShown}
           sx={{ 
             opacity: hintShown ? 0.5 : 1,
-            transition: 'opacity 0.3s ease-in-out'
+            transition: 'opacity 0.3s ease-in-out',
           }}
         >
           Yes

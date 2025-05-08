@@ -7,7 +7,7 @@ interface WelcomeBoxProps {
   onLocationChange: (location: string, image: string) => void;
 }
 
-export const WelcomeBox: React.FC<WelcomeBoxProps> = ({ location, setLocation, onLocationChange }) => {
+export const WelcomeBox: React.FC<WelcomeBoxProps> = ({ location, onLocationChange }) => {
   return (
     <Box 
       sx={{ 
